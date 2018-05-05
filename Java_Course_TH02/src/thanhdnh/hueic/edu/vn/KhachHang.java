@@ -2,14 +2,31 @@ package thanhdnh.hueic.edu.vn;
 
 public class KhachHang {
 	private String username;
-	//Tiếp tục cho các thuộc tính khác
-
+	private String password;
+	
 	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String un) {
+		username = un;
+	} 
+
+	public String getPassword() {
+		return password;
 	}
-	//Tiếp tục cho các phương thức khác
+
+	public void setPassword(String pa) {
+		password = pa;
+	}
+	
+	public void MuaHang(String th , String nsx , double dg , int sl) {
+		HangHoa hh = new HangHoa();
+		hh.setTenHang(th);
+		hh.setNgaySanXuat(nsx);
+		hh.setDonGia(dg);
+		hh.setSoLuong(sl);
+		hh.TinhTien();
+
+	}
 }
